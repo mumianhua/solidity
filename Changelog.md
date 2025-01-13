@@ -1,3 +1,14 @@
+### 0.8.23 (2023-11-08)
+
+Important Bugfixes:
+ * Optimizer: Fix block deduplicator bug which led to blocks which are identical apart from the contents of ``verbatim`` instructions to be treated as equivalent and thus collapsed into a single one.
+
+
+Compiler Features:
+ * Commandline Interface: An empty ``--yul-optimizations`` sequence can now be always provided.
+ * Standard JSON Interface: An empty ``optimizerSteps`` sequence can now always be provided.
+
+
 ### 0.8.22 (2023-10-25)
 
 Language Features:
