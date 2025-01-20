@@ -63,7 +63,7 @@ then
   boost_version="1.84.0"
   boost_package="boost_${boost_version//./_}.tar.bz2"
   boost_dir="boost_${boost_version//./_}"
-  wget "https://boostorg.jfrog.io/artifactory/main/release/$boost_version/source/$boost_package"
+  wget "https://archives.boost.io/release/$boost_version/source/$boost_package"
   tar xf "$boost_package"
   rm "$boost_package"
   cd "$boost_dir"
