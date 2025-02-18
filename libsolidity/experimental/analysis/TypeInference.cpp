@@ -994,6 +994,7 @@ std::optional<rational> rationalValue(Literal const& _literal)
 	{
 	case Literal::SubDenomination::None:
 	case Literal::SubDenomination::Wei:
+	case Literal::SubDenomination::Sun:
 	case Literal::SubDenomination::Second:
 		break;
 	case Literal::SubDenomination::Gwei:
@@ -1001,6 +1002,9 @@ std::optional<rational> rationalValue(Literal const& _literal)
 		break;
 	case Literal::SubDenomination::Ether:
 		value *= bigint("1000000000000000000");
+		break;
+	case Literal::SubDenomination::Trx:
+		value *= bigint("1000000");
 		break;
 	case Literal::SubDenomination::Minute:
 		value *= bigint("60");
